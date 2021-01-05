@@ -8,26 +8,46 @@ module.exports = function (app) {
   const modelName = 'topics'
   const mongooseClient = app.get('mongooseClient')
   const { Schema } = mongooseClient
+  const commentSchema = new Schema({
+    name: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    imageUrl: {
+      type: String
+    },
+    message: {
+      type: String,
+      required: true
+    }
+  })
   const schema = new Schema({
     memberId: {
       type: ObjectId,
-      require: true
+      required: true
     },
     memberEmail: {
       type: String,
-      require: true
+      required: true
     },
     title: {
       type: String,
-      require: true
+      required: true
     },
     subject: {
       type: String,
-      require: true
+      required: true
     },
     content: {
       type: Array,
-      require: true
+      required: true
+    },
+    comments: {
+      type: [commentSchema]
     }
   }, {
     timestamps: true
