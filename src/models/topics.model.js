@@ -48,6 +48,10 @@ module.exports = function (app) {
     },
     comments: {
       type: [commentSchema]
+    },
+    status: {
+      type: Number,
+      default: 1
     }
   }, {
     timestamps: true
