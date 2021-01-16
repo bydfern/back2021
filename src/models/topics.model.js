@@ -46,6 +46,9 @@ module.exports = function (app) {
       type: Array,
       required: true
     },
+    like: {
+      type: [ObjectId]
+    },
     comments: {
       type: [commentSchema]
     },

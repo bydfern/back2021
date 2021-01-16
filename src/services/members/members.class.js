@@ -1,7 +1,6 @@
 const { Service } = require('feathers-mongoose')
 
 exports.Members = class Members extends Service {
-
   async find (params) {
     if (!params.query.status) {
       params.query.status = 1
