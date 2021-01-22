@@ -23,6 +23,9 @@ module.exports = function (app) {
     message: {
       type: String,
       required: true
+    },
+    attachment: {
+      type: Array
     }
   })
   const schema = new Schema({
