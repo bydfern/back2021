@@ -1,6 +1,9 @@
 // members-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
+
+const { ObjectId } = require("mongoose")
+
 // for more of what you can do here.
 module.exports = function (app) {
   const modelName = 'members'
@@ -34,6 +37,9 @@ module.exports = function (app) {
     },
     profileUrl: {
       type: String
+    },
+    favorite: {
+      type: [ObjectId]
     },
     status: {
       type: Number,
