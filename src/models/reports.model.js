@@ -1,53 +1,29 @@
-// members-model.js - A mongoose model
+// reports-model.js - A mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
-
-const { ObjectId } = require("mongoose")
-
 // for more of what you can do here.
+const { ObjectId } = require('mongoose').Types
+
 module.exports = function (app) {
-  const modelName = 'members'
+  const modelName = 'reports'
   const mongooseClient = app.get('mongooseClient')
   const { Schema } = mongooseClient
   const schema = new Schema({
-    firstName: {
-      type: String,
+    reporterId: {
+      type: ObjectId,
       required: true
     },
-    lastName: {
-      type: String,
+    typeReport: {
+      type: Number, // 0=topic 1=members
       required: true
     },
-    birthday: {
-      type: String,
+    targetId: {
+      type: ObjectId,
       required: true
     },
-    university: {
-      type: String
-    },
-    faculty: {
-      type: String
-    },
-    department: {
-      type: String
-    },
-    email: {
+    reason: {
       type: String,
       required: true
-    },
-    profileUrl: {
-      type: String
-    },
-    favorite: {
-      type: [ObjectId]
-    },
-    role: {
-      type: String,
-      default: 'member'
-    },
-    status: {
-      type: Number,
-      default: 1
     }
   }, {
     timestamps: true
