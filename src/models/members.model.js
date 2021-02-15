@@ -45,6 +45,14 @@ module.exports = function (app) {
       type: String,
       default: 'member'
     },
+    exp: {
+      type: Number,
+      default: 0
+    },
+    lastLogin: {
+      type: Date,
+      default: null
+    },
     status: {
       type: Number,
       default: 1

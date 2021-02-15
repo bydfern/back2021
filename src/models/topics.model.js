@@ -9,16 +9,9 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient')
   const { Schema } = mongooseClient
   const commentSchema = new Schema({
-    name: {
-      type: String,
+    memberId: {
+      type: ObjectId,
       required: true
-    },
-    email: {
-      type: String,
-      required: true
-    },
-    imageUrl: {
-      type: String
     },
     message: {
       type: String,
