@@ -15,7 +15,8 @@ module.exports = function (app) {
     },
     typeReport: {
       type: Number, // 0=topic 1=members
-      required: true
+      required: true,
+      index: true
     },
     targetId: {
       type: ObjectId,

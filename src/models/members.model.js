@@ -33,7 +33,8 @@ module.exports = function (app) {
     },
     email: {
       type: String,
-      required: true
+      required: true,
+      index: true
     },
     profileUrl: {
       type: String
@@ -55,7 +56,8 @@ module.exports = function (app) {
     },
     status: {
       type: Number,
-      default: 1
+      default: 1,
+      index: true
     }
   }, {
     timestamps: true

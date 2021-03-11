@@ -24,7 +24,8 @@ module.exports = function (app) {
   const schema = new Schema({
     memberId: {
       type: ObjectId,
-      required: true
+      required: true,
+      index: true
     },
     memberEmail: {
       type: String,
@@ -38,6 +39,11 @@ module.exports = function (app) {
       type: String,
       required: true
     },
+    type: {
+      type: String,
+      required: true,
+      index: true
+    },
     content: {
       type: Array,
       required: true
@@ -50,7 +56,8 @@ module.exports = function (app) {
     },
     status: {
       type: Number,
-      default: 1
+      default: 1,
+      index: true
     }
   }, {
     timestamps: true
