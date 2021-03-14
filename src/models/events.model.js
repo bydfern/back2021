@@ -43,6 +43,10 @@ module.exports = function (app) {
       type: String,
       required: true
     },
+    posterName: {
+      type: String,
+      required: true
+    },
     contents: {
       type: Array
     },
@@ -56,6 +60,13 @@ module.exports = function (app) {
     allowRank: {
       type: Number,
       default: 0
+    },
+    typeEvent: {
+      type: Number, // 0=นอกสถานที่ 1=ออนไลน์,
+      default: 0
+    },
+    location: {
+      type: String
     },
     memberId: {
       type: ObjectId,

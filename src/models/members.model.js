@@ -2,7 +2,7 @@
 //
 // See http://mongoosejs.com/docs/models.html
 
-const { ObjectId } = require("mongoose")
+const { ObjectId } = require('mongoose')
 
 // for more of what you can do here.
 module.exports = function (app) {
