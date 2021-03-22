@@ -54,8 +54,7 @@ module.exports = function (app) {
       type: [commentSchema]
     },
     following: {
-      type: Number,
-      default: 0
+      type: [ObjectId]
     },
     allowRank: {
       type: Number,
