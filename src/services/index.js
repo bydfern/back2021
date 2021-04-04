@@ -5,6 +5,7 @@ const reports = require('./reports/reports.service.js')
 const commentsMember = require('./comments-member/comments-member.service.js')
 const events = require('./events/events.service.js')
 const registerEvent = require('./register-event/register-event.service.js')
+const sendEmail = require('./send-email/send-email.service.js')
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(members)
@@ -14,4 +15,5 @@ module.exports = function (app) {
   app.configure(commentsMember)
   app.configure(events)
   app.configure(registerEvent)
+  app.configure(sendEmail)
 }

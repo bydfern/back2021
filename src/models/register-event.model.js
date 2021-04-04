@@ -23,11 +23,16 @@ module.exports = function (app) {
       required: true,
       index: true
     },
-    memberName: {
+    registerId: {
+      type: ObjectId,
+      required: true,
+      index: true
+    },
+    registerName: {
       type: String,
       required: true
     },
-    memberEmail: {
+    registerEmail: {
       type: String,
       required: true
     },
