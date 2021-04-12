@@ -56,6 +56,10 @@ module.exports = function (app) {
     following: {
       type: [ObjectId]
     },
+    totalRegister: {
+      type: Number,
+      default: 0
+    },
     allowRank: {
       type: Number,
       default: 0

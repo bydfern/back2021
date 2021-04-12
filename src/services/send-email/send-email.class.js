@@ -23,25 +23,22 @@ exports.SendEmail = class SendEmail {
         throw new BadRequest()
       }
       const transporter = nodeMailer.createTransport({
-        service: 'hotmail',
+        service: 'gmail',
         auth: {
-          user: 'RethoEdis@hotmail.com',
-          pass: 'Reth0Edi$666'
+          user: 'educationspace.project@gmail.com',
+          pass: 'educationspace123456'
         }
       })
-      const message = {
+      const result = await transporter.sendMail({
         to: data.email,
         subject: 'การตอบรับคำขอเข้าร่วมกิจกรรม',
         html: data.message
-      }
-      transporter.sendMail(message, (error, info) => {
-        if (error) {
-          console.log(error)
-          throw error
-        }
-
-        return info
       })
+      if (!result) {
+        throw new GeneralError('nodemailer error')
+      }
+
+      return result
     } catch (error) {
       throw new GeneralError(error)
     }
