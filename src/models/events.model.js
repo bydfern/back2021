@@ -47,6 +47,14 @@ module.exports = function (app) {
       type: String,
       required: true
     },
+    coverUrl: {
+      type: String,
+      required: true
+    },
+    coverName: {
+      type: String,
+      required: true
+    },
     contents: {
       type: Array
     },
@@ -55,6 +63,10 @@ module.exports = function (app) {
     },
     following: {
       type: [ObjectId]
+    },
+    totalFollowing: {
+      type: Number,
+      default: 0
     },
     totalRegister: {
       type: Number,
