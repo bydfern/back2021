@@ -6,5 +6,5 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb+srv://admin:1234@educatespacetopic.vptnm.gcp.mongodb.net/test-db?authSource=admin&replicaSet=atlas-5kmjoj-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass%20Community&retryWrites=true&ssl=true"
+  "mongodb": "mongodb+srv://admin:1234@educatespacetopic.vptnm.gcp.mongodb.net/education-space?authSource=admin&replicaSet=atlas-5kmjoj-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass%20Community&retryWrites=true&ssl=true"
 }
