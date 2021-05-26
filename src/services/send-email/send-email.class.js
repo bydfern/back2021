@@ -31,7 +31,7 @@ exports.SendEmail = class SendEmail {
       })
       const result = await transporter.sendMail({
         to: data.email,
-        subject: 'การตอบรับคำขอเข้าร่วมกิจกรรม',
+        subject: data.subject,
         html: data.message
       })
       if (!result) {

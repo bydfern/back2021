@@ -16,6 +16,8 @@ const channels = require('./channels')
 
 const mongoose = require('./mongoose')
 
+const { CronJob } = require('cron')
+
 const app = express(feathers())
 
 // Load app configuration
@@ -39,6 +41,8 @@ app.configure(mongoose)
 app.configure(middleware)
 // Set up our services (see `services/index.js`)
 app.configure(services)
+const schedul = new CronJob('0 3 * * *', () => { app.service('events-notify').find() })
+schedul.start()
 // Set up event channels (see channels.js)
 app.configure(channels)
 
