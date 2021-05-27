@@ -12,7 +12,7 @@ exports.EventsNotify = class EventsNotify {
 
   async find (params) {
     try {
-      const eventsData = await this.eventModel.find({ startDate: moment().startOf('day').add(3, 'day').add(7, 'hour').toDate() })
+      const eventsData = await this.eventModel.find({ startDate: moment().startOf('day').add(1, 'day').add(7, 'hour').toDate() })
       for (let i = 0; i < eventsData.length; i++) {
         console.log('i : ', i)
         const event = eventsData[i]
