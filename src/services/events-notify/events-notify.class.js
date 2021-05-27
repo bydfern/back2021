@@ -28,7 +28,7 @@ exports.EventsNotify = class EventsNotify {
         this.sendEmailService.create({
           email,
           subject: 'แจ้งเตือนกิจกรรมที่ใกล้ถึง',
-          message: `กิจกรรม ${event.name} จะเริ่มในอีก 3 วันอย่าลืมมาร่วมกิจกรรมกันนะคะ`
+          message: `กิจกรรม ${event.name} จะเริ่มในวันพรุ่งนี้ อย่าลืมมาร่วมกิจกรรมกันนะคะ`
         })
       }
 
