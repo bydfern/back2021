@@ -51,6 +51,10 @@ module.exports = function (app) {
     like: {
       type: [ObjectId]
     },
+    totalLike: {
+      type: Number,
+      default: 0
+    },
     comments: {
       type: [commentSchema]
     },
